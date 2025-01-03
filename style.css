@@ -1,4 +1,9 @@
-@import url('https://fonts.google.com/specimen/Outfit');
+:root {
+    --light-grey: hsl(212, 45%, 89%);
+    --grey: hsl(216, 15%, 48%);
+    --dark-navy: hsl(218, 44%, 22%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,50 +13,54 @@
 
 body {
     
-    background-color: hsl(212, 45%, 89%);
+    background-color: var(--light-grey);
     font-family: 'Outfit', sans-serif;
+    --webkit-font-smoothing: antialiased; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 1px);
-    margin: 1.25rem;
+    min-height: 100vh;
+    margin: 0;
 
 }
 
 .qr-container {
     padding: 1rem;
     background-color: hsl(0, 0%, 100%);
-    border-radius: 1rem;
-    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 25px 25px 0 hsla(0, 0%, 0%, 0.0447);
     max-width: 20rem;
-
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     
+ 
 }
 
-img {
-    max-width: 100%;
-}
+.qr-code {
+    width: 100%;
+    border-radius: 10px;
 
-.qr-container img {
-    display: block;
-    margin: auto;
-    border-radius: 0.65rem;
-    margin-bottom: 1.5rem;
 }
-
-.qr-container h2 {
-    color: hsl(218, 44%, 22%);
+.qr-title {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: bold;
+    color: var(--dark-navy);
     text-align: center;
     margin-bottom: 1rem;
-    font-weight: 700;
+    margin-top: 1rem;
 }
 
-.qr-container p {
-    color: hsl(216, 15%, 48%);
+.qr-description{
+    color: var(--grey);
     text-align: center;
-    font-weight: 400;
     font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 0.19px;
+    padding: 0 1rem 0 1rem;
+    margin-bottom: 1rem;
 }
 
 
